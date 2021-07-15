@@ -1,0 +1,42 @@
+{{template "base" .}}
+
+{{define "content"}}
+    {{$res := index .Data "reservation"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-5">Reservation Summary</h1>
+
+                <hr>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <th>{{$res.FirstName}} {{$res.LastName}}</th>
+                            </tr>
+                            <tr>
+                                <td>Arrival:</td>
+                                <th>{{$res.FirstName}}</th>
+                            </tr>
+                            <tr>
+                                <td>Departure:</td>
+                                <th>{{$res.FirstName}}</th>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <th>{{$res.Email}}</th>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <th>{{$res.Phone}}</th>
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+{{end}}
